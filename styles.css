@@ -10,6 +10,9 @@ header {
     color: white;
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
@@ -24,6 +27,9 @@ h1 {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .nav li {
@@ -40,6 +46,16 @@ h1 {
 
 .nav-link:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 768px) {
+    .nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .nav li {
+        margin: 0 10px;
+    }
 }
 
 section {
@@ -64,8 +80,10 @@ h2 {
     color: #0056b3;
 }
 
-.profession {
-    margin-bottom: 20px;
+@media (max-width: 480px) {
+    body {
+        font-size: 18px;
+    }
 }
 
 footer {
